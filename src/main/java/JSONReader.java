@@ -26,17 +26,20 @@ public class JSONReader {
      * @return sorted list of country names from the lowest to the highest unemployment
      */
     public List<ValueInfo> countryName (){
-        /*System.out.println("Give JSON URL address : ");
+
+        //read from input and give URL sddress into JSONfile_name
+        System.out.println("Give JSON URL address : ");
         BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
         try {
             JSONfile_name = inputReader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
 
         //https://json-stat.org/samples/oecd.json
+
         try {
-            JSONObject readObject = (JSONObject) new JSONTokener(new URL("https://json-stat.org/samples/oecd.json").openStream()).nextValue();
+            JSONObject readObject = (JSONObject) new JSONTokener(new URL(JSONfile_name).openStream()).nextValue();
 
             int countryCount = readObject.getJSONObject("dimension").getJSONObject("area").getJSONObject("category").getJSONObject("index").length();
             int yearsCount = readObject.getJSONObject("dimension").getJSONObject("year").getJSONObject("category").getJSONObject("index").length();
