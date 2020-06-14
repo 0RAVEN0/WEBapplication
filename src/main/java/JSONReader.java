@@ -1,3 +1,8 @@
+/**
+ * @author: Romana Džubarová
+ * @content: Read form json file
+ */
+
 package main.java;
 
 import org.json.JSONException;

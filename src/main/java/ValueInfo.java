@@ -1,3 +1,8 @@
+/**
+ * @author: Romana Džubarová
+ * @content: class for wanted information
+ */
+
 package main.java;
 
 /**
